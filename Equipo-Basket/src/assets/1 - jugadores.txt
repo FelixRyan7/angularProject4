@@ -1,0 +1,11 @@
+Pau Gasol		Retirado		Ala-Pivot
+Marc Gasol 		Retirado		Pivot
+Ricky Rubio		FC Barcelona		Base
+Juan Carlos Navarro	Retirado		Escolta
+Rudy Fernandez		Real Madrid		Alero
+
+Felipe Reyes		Real Madrid			Pívot		2,04m
+Juancho Hernangómez	Denver Nuggets		Alero		2,06m
+Serge Ibaka	Toronto Raptors				Ala-Pívot	2,08m
+Willy Hernangómez	Charlotte Hornets	Pívot		2,11m
+Sergio Rodríguez	Real Madrid			Base		1,91m

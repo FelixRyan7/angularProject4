@@ -1,0 +1,67 @@
+<div class="card">
+    <div class="card-body container">
+        <div class="row d-flex justify-content-center align-center">
+            <div class="col-sm-7">
+                <div class="row w-100">
+                    <div class="col-sm-6">
+                        <label>Elige opcion de busqueda de tu jugador</label>
+                    </div>
+                    <div class="col-sm-3">
+                        <select name="opcion" [(ngModel)]="opcion" class="form-control">
+                            <option value="Nombre" selected>Nombre</option>
+                            <!--  <option value="Posición">Posición</option>-->
+                            <option value="Edad">Edad</option>
+                            </select>
+                    </div>
+                    <div class="col-sm-3">
+                        <input  type="text" class="form-control" placeholder="Jugador"  name="filterSearch"   [(ngModel)]="filterSearch" >
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-sm-5 ">
+                <div class="row d-flex w-100 align-center">
+                    <div class="col-sm-6">
+                        <label>Elige la posición del jugador</label>
+                    </div>
+                    <div class="col-sm-6">
+                        <select name="opcion2" [(ngModel)]="opcion2" class="form-select" >
+                            <option selected>Todos</option>
+                            <option value="Base" >Base</option>
+                            <option value="Escolta">Escolta</option>
+                            <option value="Alero">Alero</option>
+                            <option value="Ala-Pivot">Ala-Pivot</option>
+                            <option value="Pivot">Pivot</option>
+                            </select>
+                    </div>
+                </div>
+            </div>
+    </div>
+</div>
+</div>
+<div class="d-flex justify-content-center">
+    <a class="btn btn-dark mt-4 text-warning fw-bold p-2 text-decoration-none text-center" (click)="openModalCrear()"> Añadir Jugador </a>
+    
+</div>
+<div class="d-flex justify-content-center mt-3">
+    <div *ngIf="mensaje" class="alert alert-danger" role="alert">
+        {{ mensaje }}
+    </div>
+</div>
+    
+
+
+<section class="container py-5" >
+    <div class="row">
+        <article *ngFor="let player of players | nameFilter:filterSearch:opcion:opcion2" class="col-sm-6 col-md-3 player-item" >
+                <img (click)="setPlayer(player.id)" class="foto-jugador" src="{{player.img}}" />
+                <div class="bg-warning">
+                    <h3 (click)="setPlayer(player.id)"  class="btn p-2 text-center w-75">{{player.name}} </h3>
+                    <button type="button" class="btn btn-outline-danger" (click)="removePlayer(player.id)"><i class="fa-solid fa-eraser"></i></button>
+                </div>
+                
+        </article>
+    </div>
+    <app-create-player *ngIf="modalOpenCrear"></app-create-player>
+    <app-detail-component *ngIf="!!rerender" [player]="player"></app-detail-component>
+</section>
