@@ -27,12 +27,7 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": [],
-            "server": "src/main.server.ts",
-            "prerender": true,
-            "ssr": {
-              "entry": "server.ts"
-            }
+            "scripts": []
           },
           "configurations": {
             "production": {
@@ -93,28 +88,8 @@
             ],
             "scripts": []
           }
-        },
-        "deploy": {
-          "builder": "@angular/fire:deploy",
-          "options": {
-            "version": 2
-          },
-          "configurations": {
-            "production": {
-              "buildTarget": "equipo-basket:build:production",
-              "serveTarget": "equipo-basket:serve:production"
-            },
-            "development": {
-              "buildTarget": "equipo-basket:build:development",
-              "serveTarget": "equipo-basket:serve:development"
-            }
-          },
-          "defaultConfiguration": "production"
         }
       }
     }
-  },
-  "cli": {
-    "analytics": "88521cda-6fa8-4795-9433-d1f10cccca8a"
   }
 }

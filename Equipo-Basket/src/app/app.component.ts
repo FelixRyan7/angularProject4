@@ -1,10 +1,10 @@
-import { Component, NgModule } from '@angular/core';
+import { Component, NgModule, inject, OnInit } from '@angular/core';
 import { RouterOutlet, RouterModule } from '@angular/router';
 import { PlayersComponentComponent } from "./players-component/players-component.component";
 import { FormsModule, NgModel } from '@angular/forms';
 import { MediaComponentComponent } from './media-component/media-component.component';
 import { CreatePlayerComponent } from './create-player/create-player.component';
-
+import { Messaging, getToken, onMessage } from '@angular/fire/messaging';
 
 
 
